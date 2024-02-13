@@ -16,7 +16,9 @@ type Config struct { //donde guardaremos todos los ajustes de nuestra aplicacion
 	InfoLog  *log.Logger //Log de acciones ordinarias, para tener un detalle de lo que ha hecho el usuario (muy bueno para tener un seguimiento de lo que ha pasado)
 	ErrorLog *log.Logger //Log de errors
 	MainWindow fyne.Window //Enmagatzemar la finestra principal. Si se cierra la ventana principal, se cierran tambien todas las demás ventanas que pueda haber abiertas en el programa
-	ClimaDadesContainer *fyne.Container //
+	ClimaDadesContainer *fyne.Container 
+	HTTPClient http.Client
+
 }
 
 //Nuestra intencion es que tendremo spestañas en nuestra app, y cuando cerremos una la app recordará la info que habñiamos dejado alli y al regresar 
