@@ -34,9 +34,9 @@ func (app *Config) getClimaText() (*canvas.Text,*canvas.Text,*canvas.Text,*canva
 
 		//Preparem els textos
 		precipitacioTxt := fmt.Sprintf("Precipitació: %d%%", prediccio.ProbPrecipitacio)
-		tempMaxTxt := fmt.Sprintf("Precipitació: %d%", prediccio.TemperaturaMax)
-		tempMinTxt := fmt.Sprintf("Precipitació: %d%", prediccio.TemperaturaMin)
-		humitatTxt := fmt.Sprintf("Precipitació: %d%%", prediccio.HumitatRelativa)
+		tempMaxTxt := fmt.Sprintf("Temp. Max: %d", prediccio.TemperaturaMax)
+		tempMinTxt := fmt.Sprintf("Temp. Min: %d", prediccio.TemperaturaMin)
+		humitatTxt := fmt.Sprintf("Humitat: %d%%", prediccio.HumitatRelativa)
 
 		//Muntage dels canvas text
 		precipitacio = canvas.NewText(precipitacioTxt, displayColor) 

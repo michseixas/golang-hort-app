@@ -110,7 +110,7 @@ func (g *Diaria) GetPrediccions() (*Diaria, error) {
 
 func GetPreUrl() (string, error) {
 	//Definir la URL del primer GET a la api de aemet.es
-	url := fmt.Sprintf("https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/08001/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtY3NlaXhhc0BnbWFpbC5jb20iLCJqdGkiOiI3NDRkNjk1ZS0xOGE2LTQzMDQtOWFkYy00ZTA1MTA3M2M3MDQiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTcwNzQxNDgzNiwidXNlcklkIjoiNzQ0ZDY5NWUtMThhNi00MzA0LTlhZGMtNGUwNTEwNzNjNzA0Iiwicm9sZSI6IiJ9.nXJ-B8bj6PnV4Z2zP5n_EweWig58VtXemFgcT3rD6TI")
+	url := fmt.Sprintf("https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/%s/?api_key=%s", municipi, apiKey)
 
 	//Preparar la petició package http
 	req, _ := http.NewRequest("GET", url, nil) //A on li indiquem el metode get, la url de la petició i el tercer parametyre com a nil

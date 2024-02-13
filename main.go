@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"os"
 
 	"fyne.io/fyne/v2"
@@ -12,12 +13,13 @@ import (
 //Struct per enmagatzemar les configuracions de l' app
 
 type Config struct { //donde guardaremos todos los ajustes de nuestra aplicacion
-	App      fyne.App    //App Fyne para la GUI
-	InfoLog  *log.Logger //Log de acciones ordinarias, para tener un detalle de lo que ha hecho el usuario (muy bueno para tener un seguimiento de lo que ha pasado)
-	ErrorLog *log.Logger //Log de errors
-	MainWindow fyne.Window //Enmagatzemar la finestra principal. Si se cierra la ventana principal, se cierran tambien todas las demás ventanas que pueda haber abiertas en el programa
+	App      	fyne.App    //App Fyne para la GUI
+	InfoLog  	*log.Logger //Log de acciones ordinarias, para tener un detalle de lo que ha hecho el usuario (muy bueno para tener un seguimiento de lo que ha pasado)
+	ErrorLog 	*log.Logger //Log de errors
+	MainWindow 	fyne.Window //Enmagatzemar la finestra principal. Si se cierra la ventana principal, se cierran tambien todas las demás ventanas que pueda haber abiertas en el programa
 	ClimaDadesContainer *fyne.Container 
-	HTTPClient http.Client
+	HTTPClient 	http.Client
+	PronosticGraficContainer *fyne.Container //contenedor de la pestaña pronostico
 
 }
 
